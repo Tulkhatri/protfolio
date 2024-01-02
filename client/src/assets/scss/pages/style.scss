@@ -1,0 +1,15 @@
+.main-layout {
+  .sidebar-outlet-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    .sidebar {
+      width: 24%;
+    }
+    .dashboard {
+      display: flex;
+      flex: 1;
+    }
+  }
+}
