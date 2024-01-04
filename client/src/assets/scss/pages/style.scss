@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $bg-dark-blue;
+    background: rgb(196, 7, 7);
     padding: 2rem 3rem;
     box-shadow: 0px 2px 4px rgba(3, 2, 2, 0.12);
   }
@@ -17,10 +17,9 @@
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      // gap: 2rem;
       background: #f4a261;
       margin: 2rem;
-      padding: 2rem;
       width: 20%;
       height: 65vh;
       box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.12);
@@ -29,15 +28,55 @@
       hr {
         margin: 0 -1.8rem;
       }
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        transition: 0.5s;
+        &:hover {
+          background: #f5efff;
+          cursor: pointer;
+        }
+      }
+      .active-menu {
+        background: $white;
+        color: red;
+        transition: 0.5s;
+      }
     }
     .dashboard {
-      margin: 2rem 2rem 2rem 0;
-      padding: 2rem;
-      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.12);
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2rem 2rem 2rem 0;
+      padding: 2rem 5rem;
+      box-shadow: 0px 0px 0px 1px rgba(95, 91, 91, 0.12);
+      border-radius: 0.5rem;
       flex: 1;
       background: #f5efff;
       min-height: 65vh;
+
+      .left-portion {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-left: 5rem;
+        gap: 1rem;
+        flex-basis: 50%;
+      }
+      .right-portion {
+        box-shadow: 0px 0px 3px 0.4rem rgba(0, 0, 0, 0.12);
+        padding: 2rem;
+        border-radius: 50%;
+        .image-wrapper {
+          border-radius: 50%;
+          overflow: hidden;
+          width: 40rem;
+          height: 40rem;
+        }
+      }
     }
   }
   .footer {
@@ -45,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $bg-light-blue;
+    background: rgb(232, 99, 99);
     padding: 2rem 3rem;
   }
 }
