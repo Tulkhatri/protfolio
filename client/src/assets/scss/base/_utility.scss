@@ -78,7 +78,9 @@
 .bg-dark-blue {
   background: $bg-dark-blue;
 }
-
+.f-14-light {
+  font-size: 1.4rem !important;
+}
 .f-16-400 {
   font-size: 1.6rem;
   width: 400;
@@ -97,4 +99,104 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.loader_relative {
+  position: relative;
+
+  .progressing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    &::after {
+      content: "";
+      background: #f8f8f8;
+      opacity: 0.5;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    // .progress {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   width: 50%;
+    //   z-index: 9999999999;
+    // }
+  }
+
+  // spinner
+  .loader {
+    animation: rotate 1s infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999999;
+    height: 50px;
+    width: 50px;
+  }
+
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+  }
+  .loader:before {
+    animation: ball1 1s infinite;
+    background-color: $blue-light;
+    box-shadow: 30px 0 0 $blue-tabs-color;
+    margin-bottom: 10px;
+  }
+  .loader:after {
+    animation: ball2 1s infinite;
+    background-color: $blue-tabs-color;
+    box-shadow: 30px 0 0 $blue-tabs-color;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) scale(0.8);
+    }
+    50% {
+      transform: rotate(360deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(720deg) scale(0.8);
+    }
+  }
+
+  @keyframes ball1 {
+    0% {
+      box-shadow: 30px 0 0 $blue-tabs-color;
+    }
+    50% {
+      box-shadow: 0 0 0 $blue-tabs-color;
+      margin-bottom: 0;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 $blue-tabs-color;
+      margin-bottom: 10px;
+    }
+  }
+
+  @keyframes ball2 {
+    0% {
+      box-shadow: 30px 0 0 $blue-light;
+    }
+    50% {
+      box-shadow: 0 0 0 $blue-light;
+      margin-top: -20px;
+      transform: translate(15px, 15px);
+    }
+    100% {
+      box-shadow: 30px 0 0 $blue-light;
+      margin-top: 0;
+    }
+  }
 }
