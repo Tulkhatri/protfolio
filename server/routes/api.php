@@ -20,3 +20,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/user/list', [UserController::class, 'getUser']);
+Route::get('/user' ,function () {
+    return "hello world";
+});
+Route::post('/user',function(){
+    return response()->json("post api data");
+});
+Route::post('/login', [UserController::class, 'loginUser']);
