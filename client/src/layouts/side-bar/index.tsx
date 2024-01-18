@@ -18,14 +18,22 @@ const SideBar = () => {
       </Link>
       <hr />
       <Link to="/about">
-        <div className={`menu-item ${pathname === "/about" && "active-menu"}`}>
+        <div
+          className={`menu-item ${
+            pathname.includes("/about") && "active-menu"
+          }`}
+        >
           <BsPersonExclamation className="f-18-700" />
           <p className="f-18-700">About</p>
         </div>
       </Link>
       <hr />
       <Link to="/skills">
-        <div className={`menu-item ${pathname === "/skills" && "active-menu"}`}>
+        <div
+          className={`menu-item ${
+            pathname.includes("/skills") && "active-menu"
+          }`}
+        >
           <GiSkills className="f-18-700" />
           <p className="f-18-700">Skills</p>
         </div>
@@ -33,7 +41,9 @@ const SideBar = () => {
       <hr />
       <Link to="/education">
         <div
-          className={`menu-item ${pathname === "/education" && "active-menu"}`}
+          className={`menu-item ${
+            pathname.includes("/education") && "active-menu"
+          }`}
         >
           <MdCastForEducation className="f-18-700" />
           <p className="f-18-700">Education</p>
@@ -41,7 +51,9 @@ const SideBar = () => {
       </Link>
       <hr />
       <Link to="/work">
-        <div className={`menu-item ${pathname === "/work" && "active-menu"}`}>
+        <div
+          className={`menu-item ${pathname.includes("/work") && "active-menu"}`}
+        >
           <BsPersonWorkspace className="f-18-700" />
           <p className="f-18-700">Work</p>
         </div>
@@ -49,7 +61,9 @@ const SideBar = () => {
       <hr />
       <Link to="/experence">
         <div
-          className={`menu-item ${pathname === "/experence" && "active-menu"}`}
+          className={`menu-item ${
+            pathname.includes("/experence") && "active-menu"
+          }`}
         >
           <MdWorkHistory className="f-18-700" />
           <p className="f-18-700">Experence</p>
@@ -58,7 +72,9 @@ const SideBar = () => {
       <hr />
       <Link to="/contact">
         <div
-          className={`menu-item ${pathname === "/contact" && "active-menu"}`}
+          className={`menu-item ${
+            pathname.includes("/contact") && "active-menu"
+          }`}
         >
           <MdConnectWithoutContact className="f-20-700" />
           <p className="f-18-700">Contact</p>

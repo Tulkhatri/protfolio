@@ -10,6 +10,7 @@ import Experence from "./pages/experence";
 import Contact from "./pages/contact";
 import { Suspense } from "react";
 import SuspenseLoader from "./components/suspanse";
+import AddEditForm from "./pages/skills/components/AddEditForm";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
             <Route index element={<Dashboard />} />
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/skills/add" element={<AddEditForm />} />
+            <Route path="/skills/edit" element={<AddEditForm />} />
             <Route path="/education" element={<Education />} />
             <Route path="/work" element={<Work />} />
             <Route path="/experence" element={<Experence />} />

@@ -14,7 +14,7 @@
   align-items: flex-start;
 }
 .align-item-end {
-  align-items: flex-end;
+  align-items: flex-end !important  ;
 }
 .d-flex-column {
   display: flex;
@@ -92,6 +92,25 @@
 .f-20-700 {
   font-size: 2rem;
   width: 700;
+}
+.margin-50 {
+  margin: 5rem;
+}
+.algin-end {
+  align-self: flex-end;
+}
+.edit {
+  color: rgb(6, 6, 162);
+  cursor: pointer;
+}
+.delete {
+  color: red;
+  margin-left: 1rem;
+  cursor: pointer;
+  font-size: 2rem !important;
+}
+.confirm_delete {
+  position: absolute;
 }
 .full-screen-loader {
   width: 100%;

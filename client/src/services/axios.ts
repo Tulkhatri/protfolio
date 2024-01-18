@@ -15,13 +15,13 @@ const axios = Axios.create({
 });
 
 const refreshTokenFxn = async () => {
-  window.sessionStorage.removeItem("token");
+  window.localStorage.removeItem("token");
   toast.error("Your session has expired. Please login agian.");
   window.location.href = "/login";
 };
 axios.interceptors.request.use(
   async (config: AxiosRequestConfig): Promise<any> => {
-    const token = sessionStorage.getItem("token");
+    const token = localStorage.getItem("token");
     const fiscalYearId = sessionStorage.getItem("fiscalYear");
     if (token) {
       return {

@@ -56,6 +56,7 @@
       flex: 1;
       background: #f5efff;
       min-height: 65vh;
+      width: 100%;
 
       .left-portion {
         display: flex;
@@ -77,6 +78,9 @@
           height: 40rem;
         }
       }
+    }
+    .display-block {
+      display: block !important;
     }
   }
 
