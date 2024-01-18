@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SkillController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -26,4 +27,16 @@ Route::get('/user' ,function () {
 Route::post('/user',function(){
     return response()->json("post api data");
 });
+
+
 Route::post('/login', [UserController::class, 'loginUser']);
+
+Route::group(['middleware'=>'auth.api'], function(){
+
+    Route::post('/storeSkill', [SkillController::class, 'store']);
+    Route::get('/getSkill', [SkillController::class, 'getList']);
+    Route::any('/deleteSkill', [SkillController::class, 'delete']);
+    Route::any('/getSingleSkill', [SkillController::class, 'getData']);
+
+
+});
